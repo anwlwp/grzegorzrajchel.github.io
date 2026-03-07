@@ -74,6 +74,9 @@
     }
 
     .photo {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
       aspect-ratio: 4 / 5;
       background: #f5f5f4;
       border: 1px solid var(--line);
@@ -171,7 +174,7 @@
       </div>
 
       <aside class="sidebar">
-        <div class="photo"></div>
+        <img class="photo" src="photo.jpeg" alt="Portrait" />
         <p><strong>Grzegorz Rajchel-Mieldzioć</strong></p>
         <p class="meta">BEIT Quantum Algorithms</p>
         <p class="meta">Cracow, Poland</p>
@@ -243,7 +246,6 @@
         </div>
       </div>
     </section>
-
 
     <section id="cv">
       <div class="section-grid">
