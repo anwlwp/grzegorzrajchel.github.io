@@ -9,14 +9,15 @@
       --text:#1c1917;
       --muted:#57534e;
       --line:#e7e5e4;
-      --bg:#ffffff;
+      --bg:#f6f6f4;
     }
 
     *{box-sizing:border-box}
 
     body{
       margin:0;
-      background:var(--bg);
+      background:radial-gradient(circle at center, #ffffff 0%, #f0f0ec 55%, #dcdcd6 100%);
+      padding:40px 0;
       color:var(--text);
       font-family:"Times New Roman",Times,serif;
       line-height:1.45;
@@ -29,6 +30,8 @@
     }
 
     .page{
+      background:rgba(255,255,255,0.96);
+      box-shadow:0 2px 6px rgba(0,0,0,0.04);
       max-width:820px;
       margin:0 auto;
       padding:32px 20px 60px;
@@ -107,9 +110,36 @@
       color:var(--muted);
     }
 
+    .figure-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:16px;
+      margin-top:6px;
+    }
+
+    figure{
+      margin:0;
+    }
+
+    .figure-grid img{
+      width:100%;
+      height:240px;
+      object-fit:cover;
+      border:1px solid var(--line);
+      display:block;
+    }
+
+    figcaption{
+      margin-top:6px;
+      color:var(--muted);
+      font-size:0.95rem;
+    }
+
     @media (max-width:650px){
       header{flex-direction:column}
       .photo{width:140px}
+      .figure-grid{grid-template-columns:1fr}
+      .figure-grid img{height:auto}
     }
   </style>
 </head>
@@ -126,6 +156,7 @@
 
     <nav>
       <a href="#bio">Bio</a>
+      <a href="#figures">Figures</a>
       <a href="#publications">Publications</a>
       <a href="#awards">Awards</a>
       <a href="#teaching">Teaching</a>
@@ -144,6 +175,22 @@
 
 </section>
 
+<section id="figures">
+
+  <div class="figure-grid">
+    <figure>
+      <img src="DSC01717.jpg" alt="Quantum SudoQ figure" />
+      <figcaption>Quantum SudoQ</figcaption>
+    </figure>
+
+    <figure>
+      <img src="dice_thesis.jpg" alt="Entangled dice figure" />
+      <figcaption>Absolutely maximally entangled state of four quhexes can be represented as entangled dice </figcaption>
+    </figure>
+  </div>
+
+</section>
+
 <section id="publications">
   <h2>Selected publications</h2>
 
@@ -152,13 +199,13 @@
 <li>
 <span class="year">2025</span>
 <a href="https://arxiv.org/abs/2508.04777">Absolutely maximally entangled pure states of multipartite quantum systems</a><br>
-<span class="muted">with Rafał Bistroń, Albert Rico, Arul Lakshminarayan and Karol Życzkowski. arXiv:2508.04777</span>
+<span class="muted">with Rafał Bistroń, Albert Rico, Arul Lakshminarayan and Karol Życzkowski. arXiv:2508.04777, updated version v2 (2025).</span>
 </li>
 
 <li>
 <span class="year">2025</span>
 <a href="https://arxiv.org/abs/2506.13534">Quantum algorithm for solving generalized eigenvalue problems with application to the Schrödinger equation</a><br>
-<span class="muted">with Szymon Pliś and Emil Zak. arXiv:2506.13534</span>
+<span class="muted">with Szymon Pliś and Emil Zak. arXiv:2506.13534, updated version v2 (2025).</span>
 </li>
 
 <li>
@@ -169,26 +216,56 @@
 
 <li>
 <span class="year">2024</span>
-<a href="https://arxiv.org/abs/2410.22415">Sufficient criteria for absolute separability in arbitrary dimensions via linear map inverses</a><br>
-<span class="muted">with Jofre Abellanet-Vidal, Guillem Müller‑Rigat and Anna Sanpera. <em>Reports on Progress in Physics</em>. <a href="https://iopscience.iop.org/article/10.1088/1361-6633/ae0cfa">DOI:10.1088/1361-6633/ae0cfa</a>.</span>
+<a href="https://arxiv.org/abs/2410.14608">Spoofing of Quantum Channels Enables Low-Rank Projective Simulation</a><br>
+<span class="muted">with Timothy Heightman. arXiv:2410.14608, updated version v3 (2025).</span>
 </li>
 
 <li>
-<span class="year">2024</span>
-<a href="https://arxiv.org/abs/2402.09523">Chapter in a book: Introduction to quantum entanglement in many-body systems</a><br>
-<span class="muted">with Anubhav Kumar Srivastava, Guillem Müller-Rigat and Maciej Lewenstein. <em>	Lecture Notes in Physics, vol 1025. (2024), Springer, Cham</em>. <a href="https://link.springer.com/chapter/10.1007/978-3-031-55657-9_4">https://doi.org/10.1007/978-3-031-55657-9_4</a>.</span>
+<span class="year">2023</span>
+<a href="https://arxiv.org/abs/2309.04539">Rényi-Holevo inequality from α-z-Rényi relative entropies</a><br>
+<span class="muted">with Diego G. Bussandri, Pedro W. Lamberti and Karol Życzkowski. <em>International Journal of Quantum Information</em> (2024).</span>
 </li>
-    
+
 <li>
 <span class="year">2023</span>
 <a href="https://arxiv.org/abs/2306.12711">Certifying the quantum Fisher information from a given set of mean values: a semidefinite programming approach</a><br>
 <span class="muted">with Guillem Müller-Rigat, Anubhav Kumar Srivastava, Stanisław Kurdziałek, Maciej Lewenstein and Irénée Frérot. <em>Quantum</em> <strong>7</strong>, 1152 (2023).</span>
 </li>
-    
+
+<li>
+<span class="year">2024</span>
+<a href="https://arxiv.org/abs/2410.22415">Sufficient criteria for absolute separability in arbitrary dimensions via linear map inverses</a><br>
+<span class="muted">with Guillem Müller‑Rigat and Anna Sanpera. <em>Reports on Progress in Physics</em>. <a href="https://iopscience.iop.org/article/10.1088/1361-6633/ae0cfa">DOI:10.1088/1361-6633/ae0cfa</a>.</span>
+</li>
+
+<li>
+<span class="year">2023</span>
+<a href="https://arxiv.org/abs/2306.00999">Multi-Unitary Complex Hadamard Matrices</a><br>
+<span class="muted">with Wojciech Bruzda and Karol Życzkowski. arXiv:2306.00999.</span>
+</li>
+
+<li>
+<span class="year">2022</span>
+<a href="https://arxiv.org/abs/2212.10139">Operation fidelity explored by numerical range of Kraus operators</a><br>
+<span class="muted">with Igor Chełstowski and Karol Życzkowski. <em>Physical Review A</em> <strong>108</strong>, 022409 (2023).</span>
+</li>
+
 <li>
 <span class="year">2022</span>
 <a href="https://arxiv.org/abs/2104.05122">Thirty-six entangled officers of Euler: Quantum solution to a classically impossible problem</a><br>
 <span class="muted">with Suhail Ahmad Rather, Adam Burchardt, Wojciech Bruzda, Arul Lakshminarayan and Karol Życzkowski. <em>Physical Review Letters</em> <strong>128</strong>, 080507 (2022).</span>
+</li>
+
+<li>
+<span class="year">2022</span>
+<a href="https://arxiv.org/abs/2204.06800">9 × 4 = 6 × 6: Understanding the quantum solution to the Euler's problem of 36 officers</a><br>
+<span class="muted">with Karol Życzkowski, Wojciech Bruzda, Adam Burchardt, Suhail Ahmad Rather and Arul Lakshminarayan. <em>Journal of Physics: Conference Series</em> <strong>2448</strong>, 012003 (2023).</span>
+</li>
+
+<li>
+<span class="year">2021</span>
+<a href="https://arxiv.org/abs/2101.11288">Algebraic and geometric structures inside the Birkhoff polytope</a><br>
+<span class="muted">with Kamil Korzekwa, Zbigniew Puchała and Karol Życzkowski. <em>Journal of Mathematical Physics</em> <strong>63</strong>, 012202 (2022).</span>
 </li>
 
 <li>
@@ -205,8 +282,8 @@
 
 <li>
 <span class="year">2017</span>
-<a href="https://arxiv.org/abs/1701.02251">Effect of relativistic acceleration on continuous variable quantum teleportation and dense coding</a><br>
-<span class="muted">with Piotr Grochowski, Filip Kiałka and Andrzej Dragan. <em>Physical Review D</em> <strong>95</strong>, 105005 (2017).</span>
+<a href="https://arxiv.org/abs/1701.06465">Effect of relativistic acceleration on continuous variable quantum teleportation and dense coding</a><br>
+<span class="muted">with Andrzej Dragan and Piotr Grochowski. <em>Physical Review D</em> <strong>96</strong>, 045009 (2017).</span>
 </li>
 
   </ul>
