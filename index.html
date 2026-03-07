@@ -6,292 +6,249 @@
   <title>Grzegorz Rajchel-Mieldzioć</title>
   <style>
     :root {
-      --text: #1c1917;
-      --muted: #57534e;
-      --line: #d6d3d1;
-      --bg: #ffffff;
+      --text:#1c1917;
+      --muted:#57534e;
+      --line:#e7e5e4;
+      --bg:#ffffff;
     }
 
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
+    *{box-sizing:border-box}
 
-    body {
-      margin: 0;
-      background: var(--bg);
-      color: var(--text);
-      font-family: "Times New Roman", Times, serif;
-      line-height: 1.45;
+    body{
+      margin:0;
+      background:var(--bg);
+      color:var(--text);
+      font-family:"Times New Roman",Times,serif;
+      line-height:1.45;
     }
 
-    a {
-      color: inherit;
-      text-decoration: underline;
-      text-underline-offset: 0.15em;
+    a{
+      color:inherit;
+      text-decoration:underline;
+      text-underline-offset:0.15em;
     }
 
-    .page {
-      max-width: 980px;
-      margin: 0 auto;
-      padding: 36px 24px 60px;
+    .page{
+      max-width:820px;
+      margin:0 auto;
+      padding:32px 20px 60px;
     }
 
-    .top {
-      display: grid;
-      grid-template-columns: 1.4fr 0.8fr;
-      gap: 48px;
-      align-items: start;
+    header{
+      display:flex;
+      gap:28px;
+      align-items:flex-start;
+      margin-bottom:10px;
     }
 
-    .name {
-      font-size: 2.2rem;
-      font-weight: normal;
-      margin: 0 0 8px;
+    .photo{
+      width:120px;
+      height:auto;
+      object-fit:cover;
+      border:1px solid var(--line);
     }
 
-    .dept,
-    .lead,
-    .meta,
-    .section-note,
-    .entry-meta,
-    .contact {
-      color: var(--muted);
+    .header-text{
+      flex:1;
     }
 
-    .dept {
-      margin: 0 0 4px;
-      font-size: 0.95rem;
+    h1{
+      font-size:1.9rem;
+      font-weight:normal;
+      margin:0 0 6px;
     }
 
-    .lead {
-      margin: 0;
-      max-width: 42rem;
-      font-size: 1.05rem;
+    .lead{
+      margin:0;
+      color:var(--muted);
+      max-width:42rem;
     }
 
-    .sidebar {
-      border: 1px solid var(--line);
-      padding: 18px;
+    nav{
+      margin-top:10px;
+      font-size:0.95rem;
+      border-top:1px solid var(--line);
+      padding-top:8px;
     }
 
-    .photo {
-      width: 100%;
-      height: auto;
-      object-fit: cover;
-      aspect-ratio: 4 / 5;
-      background: #f5f5f4;
-      border: 1px solid var(--line);
-      margin-bottom: 14px;
+    nav a{
+      margin-right:14px;
     }
 
-    .sidebar p { margin: 0 0 4px; }
-
-    .nav {
-      margin-top: 18px;
-      padding-top: 14px;
-      border-top: 1px solid var(--line);
+    section{
+      border-top:1px solid var(--line);
+      padding:14px 0;
+      margin-top:10px;
     }
 
-    .nav a {
-      display: block;
-      margin: 0 0 6px;
+    h2{
+      font-size:1.05rem;
+      font-weight:normal;
+      margin:0 0 8px;
     }
 
-    section {
-      border-top: 1px solid var(--line);
-      padding: 22px 0;
+    .muted{
+      color:var(--muted);
     }
 
-    .section-grid {
-      display: grid;
-      grid-template-columns: 180px 1fr;
-      gap: 28px;
+    .pub-list{
+      list-style:none;
+      padding:0;
+      margin:0;
     }
 
-    .section-title {
-      margin: 0;
-      font-size: 0.95rem;
-      font-weight: normal;
-      letter-spacing: 0.02em;
+    .pub-list li{
+      margin-bottom:10px;
     }
 
-    .pub-list,
-    .talk-list,
-    .link-list {
-      margin: 0;
-      padding: 0;
-      list-style: none;
+    .year{
+      display:inline-block;
+      width:55px;
+      color:var(--muted);
     }
 
-    .talk-list li,
-    .link-list li {
-      padding: 0 0 14px;
-      margin: 0 0 14px;
-      border-bottom: 1px solid var(--line);
-    }
-
-    .pub-list li {
-      padding: 0 0 14px;
-      margin: 0 0 14px;
-      border-bottom: 1px solid var(--line);
-      display: grid;
-      grid-template-columns: 72px 1fr;
-      gap: 18px;
-    }
-
-    .entry-title {
-      margin: 0 0 3px;
-      font-size: 1.05rem;
-      font-weight: normal;
-    }
-
-    .entry-meta,
-    .section-note { margin: 0; }
-
-    .plain-block {
-      border: 1px solid var(--line);
-      padding: 16px;
-    }
-
-    @media (max-width: 760px) {
-      .top,
-      .section-grid,
-      .pub-list li {
-        grid-template-columns: 1fr;
-      }
-
-      .page { padding: 24px 16px 44px; }
-      .sidebar { margin-top: 8px; }
+    @media (max-width:650px){
+      header{flex-direction:column}
+      .photo{width:140px}
     }
   </style>
 </head>
 <body>
-  <div class="page">
-    <header class="top">
-      <div>
-        <p class="dept"></p>
-        <h1 class="name">Grzegorz Rajchel-Mieldzioć</h1>
-        <p class="lead">Researcher at BEIT Quantum Algorithms. My work focuses on quantum information theory, multipartite entanglement, quantum channels, and quantum algorithms.</p>
-      </div>
 
-      <aside class="sidebar">
-        <img class="photo" src="photo.jpg" alt="Portrait" />
-        <p><strong>Grzegorz Rajchel-Mieldzioć</strong></p>
-        <p class="meta">BEIT Quantum Algorithms</p>
-        <p class="meta">Cracow, Poland</p>
+<div class="page">
 
-        <nav class="nav">
-          <a href="#research">Research</a>
-          <a href="#publications">Publications</a>
-          <a href="#talks">Conferences and Talks</a>
-          <a href="#cv">CV</a>
-          <a href="#teaching">Teaching</a>
-          <a href="#links">Links</a>
-          <a href="#contact">Contact</a>
-        </nav>
-      </aside>
-    </header>
+<header>
+  <img class="photo" src="photo.jpg" alt="Portrait" />
 
-    <section id="research">
-      <div class="section-grid">
-        <h2 class="section-title">Research</h2>
-        <div>
-          <p class="section-note">My work is in quantum information theory, with emphasis on entanglement, quantum channels, and structured mathematical problems motivated by quantum computation.</p>
-          <p>Recent topics include absolutely maximally entangled states, certification of quantum Fisher information, low-rank simulation and distinguishability of noisy quantum channels, and quantum algorithms for generalized eigenvalue problems arising in the Schrödinger equation.</p>
-          <p class="section-note" style="margin-top:8px;">Research interests: multipartite entanglement, quantum algorithms, quantum chemistry, quantum channels.</p>
-        </div>
-      </div>
-    </section>
+  <div class="header-text">
+    <h1>Grzegorz Rajchel-Mieldzioć</h1>
+    <p class="lead">Researcher at BEIT Quantum Algorithms working on quantum information theory, multipartite entanglement, quantum channels and quantum algorithms.</p>
 
-    <section id="publications">
-      <div class="section-grid">
-        <h2 class="section-title">Selected publications</h2>
-        <div>
-          <ul class="pub-list">
-            <li>
-              <div class="entry-meta">2025</div>
-              <div>
-                <p class="entry-title">Absolutely maximally entangled pure states of multipartite quantum systems</p>
-                <p class="entry-meta">with Rafał Bistroń, Albert Rico, Arul Lakshminarayan, and Karol Życzkowski</p>
-              </div>
-            </li>
-            <li>
-              <div class="entry-meta">2025</div>
-              <div>
-                <p class="entry-title">Quantum algorithm for solving generalized eigenvalue problems</p>
-                <p class="entry-meta">preprint on quantum algorithms for spectral problems arising from the Schrödinger equation</p>
-              </div>
-            </li>
-            <li>
-              <div class="entry-meta">2024</div>
-              <div>
-                <p class="entry-title">Spoofing of Quantum Channels Enables Low-Rank Projective Simulation</p>
-                <p class="entry-meta">with Timothy Heightman</p>
-              </div>
-            </li>
-            <li>
-              <div class="entry-meta">2023</div>
-              <div>
-                <p class="entry-title">Rényi-Holevo inequality from α-z-Rényi relative entropies</p>
-                <p class="entry-meta">with D. G. Bussandri, P. W. Lamberti, and K. Życzkowski</p>
-              </div>
-            </li>
-            <li>
-              <div class="entry-meta">2023</div>
-              <div>
-                <p class="entry-title">Certifying the quantum Fisher information from a given set of mean values: a semidefinite programming approach</p>
-                <p class="entry-meta">Quantum 7, 1152</p>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <section id="cv">
-      <div class="section-grid">
-        <h2 class="section-title">CV</h2>
-        <div class="plain-block">
-          <p class="entry-title">Academic background</p>
-          <p class="section-note">PhD, Center for Theoretical Physics, Polish Academy of Sciences, 2021. Doctoral thesis on quantum combinatorial designs under the supervision of Karol Życzkowski.</p>
-          <p class="section-note" style="margin-top:8px;">The thesis received the National Center for Quantum Information (KCIK) award for the best doctoral thesis in quantum information in Poland for 2021-2022.</p>
-          <p class="section-note" style="margin-top:8px;">Postdoctoral researcher at ICFO in Barcelona in the group of Maciej Lewenstein, working on multipartite entanglement, quantum metrology, and machine learning in quantum information.</p>
-          <p class="section-note" style="margin-top:8px;">Quantum Computing Expert at NASK PIB for 6 months in 2024.</p>
-          <p class="section-note" style="margin-top:8px;">From Nov 2024: BEIT Quantum Algorithms.</p>
-        </div>
-      </div>
-    </section>
-
-    <section id="teaching">
-      <div class="section-grid">
-        <h2 class="section-title">Teaching</h2>
-        <div class="plain-block">
-          <p class="entry-title">Teaching and supervision</p>
-          <p class="section-note">Introduction to Quantum Algorithms, UJ, Faculty of Maths and Computer Science, Winter semester 2025/26. Lecturing with Emil Żak and Jan Tułowiecki</p>
-          <p class="section-note">Teaching assistant for a course Física II (in Spanish) at UPC – Universitat Politècnica de Catalunya, Barcelona.</p>
-        </div>
-      </div>
-    </section>
-
-    <section id="links">
-      <div class="section-grid">
-        <h2 class="section-title">Links</h2>
-        <div>
-          <ul class="link-list">
-            <li><a href="https://scholar.google.com/citations?hl=en&user=F_4uCtQAAAAJ">Google Scholar</a></li>
-            <li><a href="https://arxiv.org/search/?query=Rajchel-Mieldzio%C4%87%2C+G&searchtype=author">arXiv author search</a></li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <section id="contact">
-      <div class="section-grid">
-        <h2 class="section-title">Contact</h2>
-        <div>
-          <p class="contact">Email: grzegorz (add) rajchel@gmail.com</p>
-        </div>
-      </div>
-    </section>
+    <nav>
+      <a href="#bio">Bio</a>
+      <a href="#publications">Publications</a>
+      <a href="#awards">Awards</a>
+      <a href="#teaching">Teaching</a>
+      <a href="#links">Links</a>
+      <a href="#contact">Contact</a>
+    </nav>
   </div>
+</header>
+
+<section id="bio">
+  <h2>Bio</h2>
+
+  <p>Grzegorz is a physicist specializing in quantum information, in particular, entanglement and quantum channels. He started the journey with this branch of physics doing Bachelor and Master under supervision of Andrzej Dragan at University of Warsaw, studying properties of quantum protocols in the vicinity of black holes. Then, he moved on to a more applied branch of quantum science while doing PhD at Centre for Theoretical PAS, guided by Karol Życzkowski. During his PhD, he solved several problems related to multipartite quantum entanglement and quantum designs. One of those solutions, dubbed as entangled officers of Euler, was awarded a golden prize by National Quantum Information Centre, associated to the University of Gdańsk.</p>
+
+  <p>Subsequently, also the entire thesis was recognized as the best PhD thesis in quantum information, defended in Poland in years 2021/22, awarded by the same institution. After the defense, he moved on to ICFO in Barcelona, joining Quantum Optics Theory group of Maciej Lewenstein. He spent there two years, responsible for the branch of the group devoted to advancing the research on experimentally-motived quantum technologies. On coming back to Poland he joined newly created Quantum Computing group at NASK PIB. In October 2024, he became part of BEIT, and is exploring topics at the cross-section of quantum algorithms in chemistry and quantum information. In total, he published 22 research papers.</p>
+
+</section>
+
+<section id="publications">
+  <h2>Selected publications</h2>
+
+  <ul class="pub-list">
+
+<li>
+<span class="year">2025</span>
+<a href="https://arxiv.org/abs/2508.04777">Absolutely maximally entangled pure states of multipartite quantum systems</a><br>
+<span class="muted">with Rafał Bistroń, Albert Rico, Arul Lakshminarayan and Karol Życzkowski. arXiv:2508.04777, updated version v2 (2025).</span>
+</li>
+
+<li>
+<span class="year">2025</span>
+<a href="https://arxiv.org/abs/2506.13534">Quantum algorithm for solving generalized eigenvalue problems with application to the Schrödinger equation</a><br>
+<span class="muted">with Szymon Pliś and Emil Zak. arXiv:2506.13534, updated version v2 (2025).</span>
+</li>
+
+<li>
+<span class="year">2025</span>
+<a href="https://arxiv.org/abs/2504.05394">Quantum Circuits for High-Dimensional Absolutely Maximally Entangled States</a><br>
+<span class="muted">with Berta Casas, Suhail Ahmad Rather, Marcin Płodzień, Wojciech Bruzda, Alba Cervera-Lierta and Karol Życzkowski. <em>Quantum Science and Technology</em>. <a href="https://iopscience.iop.org/article/10.1088/2058-9565/ae46d6">DOI:10.1088/2058-9565/ae46d6</a>.</span>
+</li>
+
+<li>
+<span class="year">2024</span>
+<a href="https://arxiv.org/abs/2410.22415">Sufficient criteria for absolute separability in arbitrary dimensions via linear map inverses</a><br>
+<span class="muted">with Jofre Abellanet-Vidal, Guillem Müller‑Rigat and Anna Sanpera. <em>Reports on Progress in Physics</em>. <a href="https://iopscience.iop.org/article/10.1088/1361-6633/ae0cfa">DOI:10.1088/1361-6633/ae0cfa</a>.</span>
+</li>
+
+<li>
+<span class="year">2024</span>
+<a href="https://arxiv.org/abs/2402.09523">Chapter in a book: Introduction to quantum entanglement in many-body systems</a><br>
+<span class="muted">with Anubhav Kumar Srivastava, Guillem Müller-Rigat and Maciej Lewenstein. <em>	Lecture Notes in Physics, vol 1025. (2024), Springer, Cham</em>. <a href="https://link.springer.com/chapter/10.1007/978-3-031-55657-9_4">https://doi.org/10.1007/978-3-031-55657-9_4</a>.</span>
+</li>
+    
+<li>
+<span class="year">2023</span>
+<a href="https://arxiv.org/abs/2306.12711">Certifying the quantum Fisher information from a given set of mean values: a semidefinite programming approach</a><br>
+<span class="muted">with Guillem Müller-Rigat, Anubhav Kumar Srivastava, Stanisław Kurdziałek, Maciej Lewenstein and Irénée Frérot. <em>Quantum</em> <strong>7</strong>, 1152 (2023).</span>
+</li>
+    
+<li>
+<span class="year">2022</span>
+<a href="https://arxiv.org/abs/2104.05122">Thirty-six entangled officers of Euler: Quantum solution to a classically impossible problem</a><br>
+<span class="muted">with Suhail Ahmad Rather, Adam Burchardt, Wojciech Bruzda, Arul Lakshminarayan and Karol Życzkowski. <em>Physical Review Letters</em> <strong>128</strong>, 080507 (2022).</span>
+</li>
+
+<li>
+<span class="year">2021</span>
+<a href="https://arxiv.org/abs/2106.02967">Genuinely quantum SudoQ and its cardinality</a><br>
+<span class="muted">with Jerzy Paczos, Marcin Wierzbiński, Adam Burchardt and Karol Życzkowski. <em>Physical Review A</em> <strong>104</strong>, 042423 (2021).</span>
+</li>
+
+<li>
+<span class="year">2020</span>
+<a href="https://arxiv.org/abs/1909.07709">Entangling power of multipartite unitary gates</a><br>
+<span class="muted">with Tomasz Linowski and Karol Życzkowski. <em>Journal of Physics A: Mathematical and Theoretical</em> <strong>53</strong>, 125303 (2020).</span>
+</li>
+
+<li>
+<span class="year">2017</span>
+<a href="https://arxiv.org/abs/1701.02251">Effect of relativistic acceleration on continuous variable quantum teleportation and dense coding</a><br>
+<span class="muted">with Piotr Grochowski, Filip Kiałka and Andrzej Dragan. <em>Physical Review D</em> <strong>95</strong>, 105005 (2017).</span>
+</li>
+
+  </ul>
+</section>
+
+<section id="awards">
+  <h2>Awards</h2>
+
+  <p class="muted">KCIK Award for the best PhD thesis in quantum information in Poland (2021–2022).</p>
+
+  <p class="muted">Winner of the Polish general‑knowledge TV quiz <em>1 z 10</em> (2016).</p>
+
+</section>
+
+<section id="teaching">
+  <h2>Teaching</h2>
+
+  <p class="muted">Introduction to Quantum Algorithms, UJ Faculty of Mathematics and Computer Science, Winter semester 2025/26.</p>
+
+  <p class="muted">Teaching assistant for Física II at Universitat Politècnica de Catalunya.</p>
+
+</section>
+
+<section id="links">
+  <h2>Links</h2>
+
+  <p>
+    <a href="https://scholar.google.com/citations?hl=en&user=F_4uCtQAAAAJ">Google Scholar</a><br>
+    <a href="https://arxiv.org/search/?query=Rajchel-Mieldzio%C4%87%2C+G&searchtype=author">arXiv</a><br>
+    <a href="https://www.linkedin.com/in/grzegorz-rajchel-mieldzio%C4%87-aa2a61125/">LinkedIn</a>
+  </p>
+
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+
+  <p class="muted"><a href="mailto:grzegorzrajchel@gmail.com">grzegorzrajchel@gmail.com</a></p>
+
+</section>
+
+</div>
+
 </body>
 </html>
